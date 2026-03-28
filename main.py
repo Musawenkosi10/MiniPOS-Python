@@ -85,6 +85,7 @@ def run_pos():
 
     csv_path = Path("data") / "sales.csv"
     append_sales_csv(csv_path, products)
+    print(f"Added {len(products)} products to CSV")
 
     db = None
     try:
