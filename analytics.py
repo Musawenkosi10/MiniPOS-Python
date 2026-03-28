@@ -1,5 +1,6 @@
 import pandas as pd
 import matplotlib.pyplot as plt
+import os
 
 def run_analytics():
 
@@ -16,6 +17,7 @@ def run_analytics():
     plt.xlabel("Product")
     plt.ylabel("Total Sales")
 
+    os.makedirs("charts", exist_ok=True)
     plt.savefig("charts/sales_chart.png")
 
     plt.show()
