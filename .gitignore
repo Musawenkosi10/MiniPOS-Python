@@ -114,5 +114,5 @@ dmypy.json
 Thumbs.db
 
 # Project specific
-charts/
-data/
+# charts/  # Uncomment to ignore generated charts
+# data/    # Uncomment to ignore generated data
