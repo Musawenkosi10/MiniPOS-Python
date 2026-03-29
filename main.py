@@ -74,6 +74,8 @@ def run_pos():
         price = prompt_float("Price: ", min_value=0.0)
         products.append(Product(name, quantity, price))
 
+    print(f"DEBUG: Created {len(products)} products")
+
     receipt = Receipt(cashier, customer, products)
     receipt.print_receipt()
 
@@ -83,6 +85,7 @@ def run_pos():
     change = payment - total
     print(f"Change: R{change:.2f}")
 
+    print("DEBUG: About to save to CSV")
     csv_path = Path("data") / "sales.csv"
     append_sales_csv(csv_path, products)
     print(f"Added {len(products)} products to CSV")
